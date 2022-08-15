@@ -9,7 +9,7 @@ body {
 .container {
   width: 50%;
   height: 470px;
-  background-color: rgb(207, 243, 231);
+  background-color: rgb(227, 231, 255);
   border-radius: 30px;
   border: 1px solid gray;
   display: flex;
@@ -84,9 +84,18 @@ body {
 }
 
 .btn-clear {
-  background-color: rgb(210, 242, 115);
+  background-color: rgb(249, 255, 166);
 }
 
 .btn-delete {
-  background-color: rgb(240, 155, 155);
+  background-color: rgb(255, 205, 205);
+}
+
+.btn-add,
+.btn-sub,
+.btn-mul,
+.btn-div,
+.btn-equal,
+.btn-dot {
+  background-color: rgb(216, 213, 213);
 }

@@ -84,7 +84,7 @@ const renderOperation = function () {
         const operatorNew = btn.textContent;
         console.log(valueA, valueB);
         // Remove the undefined in the display when diving by zero
-        if ((operatorPrev, valueA, valueB)) {
+        if (operatorPrev ?? valueA ?? valueB) {
           displayTop.textContent = `${operate(
             operatorPrev,
             valueA,
