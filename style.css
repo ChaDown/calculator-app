@@ -12,14 +12,18 @@ body {
   background-color: rgb(207, 243, 231);
   border-radius: 30px;
   border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .display {
   width: 90%;
   background-color: rgb(251, 248, 245);
   height: 100px;
-  margin: auto;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 20px;
   border: 1px solid gray;
   font-size: 70px;
@@ -37,12 +41,12 @@ body {
 
 .btn {
   width: 20%;
-  height: 60px;
+  height: 50px;
   background-color: rgb(251, 248, 245);
   margin: 5px;
   border: 1px solid gray;
   border-radius: 10px;
-  font-size: 50px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
 }
@@ -50,4 +54,28 @@ body {
 .row {
   display: flex;
   justify-content: center;
+}
+
+.top-btns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-clear,
+.btn-delete {
+  width: 40%;
+  text-align: center;
+  font-size: 40px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.btn-clear {
+  background-color: rgb(210, 242, 115);
+}
+
+.btn-delete {
+  background-color: rgb(240, 155, 155);
 }

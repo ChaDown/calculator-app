@@ -2,16 +2,7 @@
 
 const btnContainer = document.querySelector(".btn-container");
 const display = document.querySelector(".display");
-const btn1 = document.querySelector("btn-1");
-const btn2 = document.querySelector("btn-2");
-const btn3 = document.querySelector("btn-3");
-const btn4 = document.querySelector("btn-4");
-const btn5 = document.querySelector("btn-5");
-const btn6 = document.querySelector("btn-6");
-const btn7 = document.querySelector("btn-7");
-const btn8 = document.querySelector("btn-8");
-const btn9 = document.querySelector("btn-9");
-const btn0 = document.querySelector("btn-0");
+const numbers = document.querySelectorAll(".number");
 const btnAdd = document.querySelector("btn-add");
 const btnSub = document.querySelector("btn-sub");
 const btnMult = document.querySelector("btn-mul");
@@ -41,3 +32,17 @@ const operate = function (operator, a, b) {
   if (operator === "*") return multiplyFunction(a, b);
   if (operator === "/") return divideFunction(a, b);
 };
+
+const renderDisplay = function (btn) {
+  display.textContent += btn;
+};
+
+const renderBtnPress = function () {
+  for (const num of numbers) {
+    num.addEventListener("click", () => renderDisplay(num.textContent), {
+      ...(num.textContent === "." && { once: true }),
+    });
+  }
+};
+
+renderBtnPress();
