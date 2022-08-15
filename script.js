@@ -15,22 +15,30 @@ const btnDelete = document.querySelector(".btn-delete");
 const operatorsArr = [btnAdd, btnSub, btnMult, btnDiv];
 
 const addFunction = function (a, b) {
-  return a + b;
+  return checkNumLength(a + b);
 };
 
 const subtractFunction = function (a, b) {
-  return a - b;
+  return checkNumLength(a - b);
 };
 
 const multiplyFunction = function (a, b) {
-  return a * b;
+  return checkNumLength(a * b);
 };
 
 const divideFunction = function (a, b) {
   if (b == 0) {
+    displayMain.textContent = "";
+    displayTop.textContent = "";
     return alert("You can't divide by 0 in this universe buddy!");
   }
-  return a / b;
+  return checkNumLength(a / b);
+};
+
+const checkNumLength = function (num) {
+  const length = num.toString().replace(".", "").length;
+  if (length > 10) return num.toPrecision(10);
+  else return num;
 };
 
 const operate = function (operator, a, b) {
@@ -41,7 +49,8 @@ const operate = function (operator, a, b) {
 };
 
 const renderDisplay = function (value) {
-  displayMain.textContent += value;
+  if (displayMain.textContent.toString().replace(".", "").length < 13)
+    displayMain.textContent += value;
 };
 
 const renderBtnPress = function () {
@@ -74,12 +83,19 @@ const renderOperation = function () {
         const operatorPrev = displayTop.textContent.slice(-1);
         const operatorNew = btn.textContent;
         console.log(valueA, valueB);
-        displayTop.textContent = `${operate(
-          operatorPrev,
-          valueA,
-          valueB
-        )} ${operatorNew}`;
-        displayMain.textContent = "";
+        // Remove the undefined in the display when diving by zero
+        if ((operatorPrev, valueA, valueB)) {
+          displayTop.textContent = `${operate(
+            operatorPrev,
+            valueA,
+            valueB
+          )} ${operatorNew}`;
+          displayMain.textContent = "";
+        } else {
+          alert("You can't divide by 0 in this universe buddy!");
+          displayMain.textContent = "";
+          displayTop.textContent = "";
+        }
       }
     });
   }

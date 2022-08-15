@@ -11,3 +11,4 @@ to do --
 
 Limit the amount of characters in the display. Round 
 sort out the diving by zero. Showing undefined in top display
+colour in Operators
