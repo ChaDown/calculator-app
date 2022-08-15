@@ -1,0 +1,13 @@
+Current functionality --
+
+Buttons to display 
+Clear Button
+Operators Buttons and render result on main display
+
+
+When operator is pressed again, render result to top display and clear the main display
+
+to do --
+
+Limit the amount of characters in the display. Round 
+sort out the diving by zero. Showing undefined in top display

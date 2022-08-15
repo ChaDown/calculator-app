@@ -26,11 +26,22 @@ body {
   margin-right: auto;
   border-radius: 20px;
   border: 1px solid gray;
-  font-size: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: right;
   padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.display-top {
+  font-size: 25px;
+  min-height: 30px;
+}
+
+.display-main {
+  font-size: 50px;
+  min-height: 58px;
 }
 
 .btn-container {
